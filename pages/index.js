@@ -2,8 +2,13 @@ import Head from 'next/head'
 import Image from 'next/image'
 import styles from '../styles/Home.module.css'
 import Link from 'next/link'
+import { useRouter } from 'next/router'
+
 
 export default function Home() {
+  const router = useRouter() 
+    console.log(router)  
+
   return (
     <div className={styles.container}>
       <Head>
@@ -19,8 +24,6 @@ export default function Home() {
         <nav>
           <Link href='/timeline'>timeline</Link>
         </nav>
-        
-
       </main>
 
       <footer className={styles.footer}>
